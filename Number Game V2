@@ -1,0 +1,19 @@
+import random
+
+number = random.randint(1,10)
+play = True
+
+while play :
+    guess = int(input('Guess a number between 1 and 10 : '))
+    
+    if guess == number:
+        print ('Thats correct')
+        keepGoing = input('Do you want to play again (y/n) : ')
+        if keepGoing == 'n':
+            play = False
+        else :
+            number == random.randint(1,10)
+    elif guess < number :
+        print('Too Low')
+    else :
+        print('Too High')
